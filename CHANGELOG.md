@@ -1,6 +1,16 @@
 # Changelog
 
-## Unreleased
+## 0.3.8 — 2026-10-13
+
+- Fix host entry bundling in tsdown: stop externalising relative host imports and add a portable output build guard to prevent missing bundled modules (`ERR_MODULE_NOT_FOUND ./skill-roots.ts`, #58, #59, #61).
+- Fix Reader layering and tool display: resolve code block and elapsed time element stacking (#47, #50), clean up empty whitespace after collapsing tool calls, and restore terminal command preview (#52, #57).
+- Mirror official user and steering node renderers through slot fallback, restoring compatibility with plugins like `dsh-easyrewrite` without losing custom user bubbles (#42, #56).
+- Preserve standard backdrop-filter blur in Chromium for glass mode, adopting a floating capsule aesthetic for sticky controls (#43).
+- Windows Explorer and Finder reveal fixes: resolve relative workspace paths and safely handle whitespace and special characters without falling back to "This PC" (#60).
+- Re-inject plugin stylesheet automatically if cleared on session switch to prevent blank pages (#60).
+- Add timeout deadline fallback for retiring content animations to ensure completion (#60).
+
+## 0.3.7 — 2026-10-08
 
 - Restore the official chat seat attributes on Better Display user and steering rows so rewind actions can find durable messages.
 - Render pending inbox steering rows and deduplicate them against observed local submissions.
